@@ -3,6 +3,11 @@ let promise = new Promise(function (resolve, reject) {
 		console.log('Promise Created successfully');
 		resolve();
 	}, 1000);
-}).then(function () {
+});
+promise.then(function () {
 	console.log('Promises resolved');
+});
+promise.catch(function () {});
+promise.finally(function () {
+	console.log('the promise is consumed either resolved or rejected');
 });
