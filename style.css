@@ -1,12 +1,29 @@
 body {
 	background-color: #212121;
 	color: white;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .card {
 	display: flex;
+	justify-content: center;
 	background-color: rgb(69, 66, 253);
 	border-radius: 15px;
-	width: max-content;
+	width: 40%;
 	margin: 10px auto;
 	padding: 1rem;
+}
+.image {
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	float: left;
+}
+.textSection {
+	margin-left: 3rem;
+}
+.followers {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
 }
