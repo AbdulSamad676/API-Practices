@@ -13,24 +13,39 @@ promiseOne.finally(function () {
 });
 // second approach
 
-let error = false;
-let promiseTwo = new Promise(function (resolve, reject) {
-	setTimeout(function () {
-		if (!error) {
-			resolve({ name: 'Abdul Samad Khan', age: 24 });
-		} else {
-			reject('ERR: Something is wrong');
-		}
-	}, 1000);
-});
+// let error = false;
+// let promiseTwo = new Promise(function (resolve, reject) {
+// 	setTimeout(function () {
+// 		if (!error) {
+// 			resolve({ name: 'Abdul Samad Khan', age: 24 });
+// 		} else {
+// 			reject('ERR: Something is wrong');
+// 		}
+// 	}, 1000);
+// });
 
-async function consumePromiseTwo() {
+// async function consumePromiseTwo() {
+// 	try {
+// 		const response = await promiseTwo;
+// 		console.log(response);
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// }
+
+// consumePromiseTwo();
+
+// fetch API Practices
+
+async function getData() {
 	try {
-		const response = await promiseTwo;
-		console.log(response);
+		let response = await fetch(
+			'https://api.github.com/users/hiteshchoudhary'
+		);
+		let data = await response.json();
+		console.log(`Name fatched from API: ${data.name}`);
 	} catch (error) {
 		console.log(error);
 	}
 }
-
-consumePromiseTwo();
+getData();
