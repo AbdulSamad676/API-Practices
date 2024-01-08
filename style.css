@@ -1,0 +1,12 @@
+body {
+	background-color: #212121;
+	color: white;
+}
+.card {
+	display: flex;
+	background-color: rgb(69, 66, 253);
+	border-radius: 15px;
+	width: max-content;
+	margin: 10px auto;
+	padding: 1rem;
+}
