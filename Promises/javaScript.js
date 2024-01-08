@@ -35,17 +35,33 @@ promiseOne.finally(function () {
 
 // consumePromiseTwo();
 
-// fetch API Practices
+// fetch API Practices 1st approach
 
-async function getData() {
-	try {
-		let response = await fetch(
-			'https://api.github.com/users/hiteshchoudhary'
-		);
-		let data = await response.json();
-		console.log(`Name fatched from API: ${data.name}`);
-	} catch (error) {
-		console.log(error);
-	}
-}
-getData();
+// async function getData() {
+// 	try {
+// 		let response = await fetch(
+// 			'https://api.github.com/users/hiteshchoudhary'
+// 		);
+// 		let data = await response.json();
+// 		console.log(`Name fatched from API: ${data.name}`);
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// }
+// getData();
+
+// fetch API Practices 2nd approach
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+	.then(response => {
+		return response.json();
+	})
+	.then(data => {
+		console.log(`Name: ${data.name} and Followers are: ${data.followers}`);
+	})
+	.catch(error => {
+		console.log('Error occured');
+	})
+	.finally(() => {
+		console.log('API is fatched either succesfully or Error Occured');
+	});
