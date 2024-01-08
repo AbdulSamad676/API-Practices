@@ -8,15 +8,16 @@ body {
 	justify-content: center;
 	background-color: rgb(69, 66, 253);
 	border-radius: 15px;
-	width: 40%;
+	width: max-content;
 	margin: 10px auto;
-	padding: 1rem;
+	padding: 1rem 2rem;
 }
 .image {
 	height: 100px;
 	width: 100px;
 	border-radius: 100%;
 	float: left;
+	margin-bottom: 1rem;
 }
 .textSection {
 	margin-left: 3rem;
@@ -25,5 +26,12 @@ body {
 	background-color: black;
 	color: white;
 	padding: 10px;
+	border-radius: 5px;
+}
+.youTube {
+	background-color: red;
+	color: white;
+	font-size: 16px;
+	padding: 5px;
 	border-radius: 5px;
 }

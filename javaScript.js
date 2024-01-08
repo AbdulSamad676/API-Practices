@@ -2,6 +2,8 @@ const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
 const image = document.querySelector('.image');
 const userName = document.querySelector('.name');
 const followers = document.querySelector('.followers');
+const youTubeLink = document.querySelector('.link');
+
 let xhr = new XMLHttpRequest(); // creating xml object
 const url = xhr.open('Get', requestUrl); //sending request to the server
 let data;
@@ -15,8 +17,9 @@ xhr.onreadystatechange = function () {
 		// console.log(data.followers); // this actually refers to the current object
 		// image.src = data.avatar_url;
 		image.setAttribute('src', data.avatar_url);
-		userName.innerHTML = data.login;
+		userName.innerHTML = data.name;
 		followers.innerHTML = data.followers;
+		youTubeLink.href = data.blog;
 	}
 	console.log(data);
 };
