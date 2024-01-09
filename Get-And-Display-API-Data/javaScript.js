@@ -1,5 +1,6 @@
-console.log('Environment setup');
-
+// console.log('Environment setup');
+let table = document.querySelector('.table-data');
+console.log(table.innerHTML);
 // const response = fetch('https://jsonplaceholder.typicode.com/users')
 // 	.then(function (response) {
 // 		let data = response.json();
@@ -12,7 +13,14 @@ console.log('Environment setup');
 function display(data) {
 	// console.log(data);
 	data.forEach(item => {
-		console.log(item);
+		let row = document.createElement('tr');
+		row.innerHTML = `<td>${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.email}</td>
+        <td>${item.website}</td>`;
+		row.className = 'data-row';
+		table.appendChild(row);
+		// console.log(item);
 	});
 }
 
