@@ -1,14 +1,6 @@
 // console.log('Environment setup');
 let table = document.querySelector('.table-data');
-console.log(table.innerHTML);
-// const response = fetch('https://jsonplaceholder.typicode.com/users')
-// 	.then(function (response) {
-// 		let data = response.json();
-// 		console.log(data.Array);
-// 	})
-// 	.catch(function (error) {
-// 		console.log(`ERR: ${error}`);
-// 	});
+// console.log(table.innerHTML);
 
 function display(data) {
 	// console.log(data);
